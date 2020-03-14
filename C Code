@@ -1,0 +1,32 @@
+// Program to check right angle triangle
+//libraries
+#include <stdio.h>
+#include <stdlib.h>
+// fUnctions to make sure the traiangle is equal or not
+unsigned char is_right(unsigned char a , unsigned char b , unsigned char c )
+{
+    // return value
+    unsigned char ret = 0 ;
+    // Define the values of the traingle
+    unsigned int a_square = (unsigned int)a*a ;
+    unsigned int b_square = (unsigned int)b*b ;
+    unsigned int c_square = (unsigned int)c*c ;
+    // check if the equal rectangle return the ret value with 1
+    if ((a_square != 0) && (b_square != 0) && (c_square != 0))
+    {
+        if ((a_square + b_square == c_square) ||(b_square + c_square == a_square)||(a_square + c_square == b_square) )
+        {
+            return ret = 1 ;
+        }
+    }
+    return ret ;
+}
+// the main fuction
+int main()
+{
+    if (is_right(3 , 4 , 5 )== 1)
+         {
+            printf(" 3 , 4 , 5 make a right Angle traiangle \n");
+         }
+    return 0 ;
+}
